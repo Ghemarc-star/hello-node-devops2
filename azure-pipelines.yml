@@ -5,7 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  azureSubscription: 'YOUR-AZURE-SERVICE-CONNECTION-NAME'
+  azureSubscription: 'my-azure-connection'
   webAppName: 'node-web-ghemarc'
   packageDirectory: '$(System.DefaultWorkingDirectory)'
 
@@ -39,3 +39,4 @@ steps:
     appName: '$(webAppName)'
     package: '$(Build.ArtifactStagingDirectory)/node-app.zip'
   displayName: 'Deploy to Azure Web App'
+
