@@ -2,7 +2,7 @@ trigger:
   - main
 
 pool:
-  name: Azure Pipelines
+  name: Default
   vmImage: 'ubuntu-latest'
 
 variables:
@@ -40,5 +40,6 @@ steps:
     appName: '$(webAppName)'
     package: '$(Build.ArtifactStagingDirectory)/node-app.zip'
   displayName: 'Deploy to Azure Web App'
+
 
 
